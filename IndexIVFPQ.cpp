@@ -8,6 +8,7 @@
 // -*- c++ -*-
 
 #include <faiss/IndexIVFPQ.h>
+#include <faiss/FaissHook.h>
 
 #include <cmath>
 #include <cstdio>

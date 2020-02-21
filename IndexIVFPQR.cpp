@@ -9,6 +9,7 @@
 
 #include <faiss/IndexIVFPQR.h>
 
+#include <faiss/FaissHook.h>
 #include <faiss/utils/Heap.h>
 #include <faiss/utils/utils.h>
 #include <faiss/utils/distances.h>

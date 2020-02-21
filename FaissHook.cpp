@@ -29,24 +29,24 @@ fvec_func_ptr fvec_Linf = fvec_Linf_avx512;
 
 /*****************************************************************************/
 
-bool support_avx512() {
-    if (!faiss_use_avx512) return false;
+//bool support_avx512() {
+//    if (!faiss_use_avx512) return false;
+//
+//    InstructionSet& instruction_set_inst = InstructionSet::GetInstance();
+//    return (instruction_set_inst.AVX512F() &&
+//            instruction_set_inst.AVX512DQ() &&
+//            instruction_set_inst.AVX512BW());
+//}
 
-    InstructionSet& instruction_set_inst = InstructionSet::GetInstance();
-    return (instruction_set_inst.AVX512F() &&
-            instruction_set_inst.AVX512DQ() &&
-            instruction_set_inst.AVX512BW());
-}
+//bool support_avx() {
+//    InstructionSet& instruction_set_inst = InstructionSet::GetInstance();
+//    return (instruction_set_inst.AVX2());
+//}
 
-bool support_avx() {
-    InstructionSet& instruction_set_inst = InstructionSet::GetInstance();
-    return (instruction_set_inst.AVX2());
-}
-
-bool support_sse() {
-    InstructionSet& instruction_set_inst = InstructionSet::GetInstance();
-    return (instruction_set_inst.SSE());
-}
+//bool support_sse() {
+//    InstructionSet& instruction_set_inst = InstructionSet::GetInstance();
+//    return (instruction_set_inst.SSE());
+//}
 
 // void hook_init() {
 //     static std::mutex hook_mutex;

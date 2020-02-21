@@ -10,6 +10,7 @@
 #include <faiss/IndexFlat.h>
 
 #include <cstring>
+#include <faiss/FaissHook.h>
 #include <faiss/utils/distances.h>
 #include <faiss/utils/extra_distances.h>
 #include <faiss/utils/utils.h>

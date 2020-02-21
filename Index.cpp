@@ -8,6 +8,7 @@
 // -*- c++ -*-
 
 #include <faiss/Index.h>
+#include <faiss/FaissHook.h>
 
 #include <faiss/impl/AuxIndexStructures.h>
 #include <faiss/impl/FaissAssert.h>

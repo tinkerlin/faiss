@@ -8,6 +8,7 @@
 // -*- c++ -*-
 
 #include <faiss/impl/lattice_Zn.h>
+#include <faiss/FaissHook.h>
 
 #include <cstdlib>
 #include <cmath>

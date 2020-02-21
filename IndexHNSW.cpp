@@ -8,6 +8,7 @@
 // -*- c++ -*-
 
 #include <faiss/IndexHNSW.h>
+#include <faiss/FaissHook.h>
 
 
 #include <cstdlib>

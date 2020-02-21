@@ -8,6 +8,7 @@
 // -*- c++ -*-
 
 #include <faiss/utils/distances.h>
+#include <faiss/FaissHook.h>
 
 #include <cmath>
 #include <omp.h>

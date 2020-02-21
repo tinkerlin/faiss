@@ -8,6 +8,7 @@
 // -*- c++ -*-
 
 #include <faiss/Index2Layer.h>
+#include <faiss/FaissHook.h>
 
 #include <cmath>
 #include <cstdio>
