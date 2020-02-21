@@ -23,30 +23,57 @@ namespace faiss {
  * Optimized distance/norm/inner prod computations
  *********************************************************/
 
-
+#ifdef __AVX__
 /// Squared L2 distance between two vectors
-float fvec_L2sqr (
+float fvec_L2sqr_avx (
         const float * x,
         const float * y,
         size_t d);
 
 /// inner product
-float  fvec_inner_product (
+float  fvec_inner_product_avx (
         const float * x,
         const float * y,
         size_t d);
 
 /// L1 distance
-float fvec_L1 (
+float fvec_L1_avx (
         const float * x,
         const float * y,
         size_t d);
 
-float fvec_Linf (
+float fvec_Linf_avx (
+        const float * x,
+        const float * y,
+        size_t d);
+#endif
+
+#ifdef __SSE__
+float fvec_L2sqr_sse (
         const float * x,
         const float * y,
         size_t d);
 
+float  fvec_inner_product_sse (
+        const float * x,
+        const float * y,
+        size_t d);
+
+float fvec_L1_sse (
+        const float * x,
+        const float * y,
+        size_t d);
+
+float fvec_Linf_sse (
+        const float * x,
+        const float * y,
+        size_t d);
+#endif
+
+float fvec_jaccard (
+        const float * x,
+        const float * y,
+        size_t d);
 
 /** Compute pairwise distances between sets of vectors
  *
@@ -175,7 +202,11 @@ void knn_L2sqr (
         size_t d, size_t nx, size_t ny,
         float_maxheap_array_t * res);
 
-
+void knn_jaccard (
+        const float * x,
+        const float * y,
+        size_t d, size_t nx, size_t ny,
+        float_maxheap_array_t * res);
 
 /** same as knn_L2sqr, but base_shift[bno] is subtracted to all
  * computed distances.
